@@ -16,8 +16,8 @@ public class MergeSort {
         for (int i = mid; i < n; i++) {
             right_side[i - mid] = a[i];
         }
-        mergeSort(left_side, mid);
-        mergeSort(right_side, n - mid);
+        mergeSort(left_side, mid); //recursively merge 
+        mergeSort(right_side, n - mid); //recursively merge
 
         merge(a, left_side, right_side, mid, n - mid);
     }
@@ -28,6 +28,7 @@ public class MergeSort {
         int j= 0;
         int k = 0;
         while (i < left_index && j < right_index) {
+            //copies all items from either 
             if (left_side[i] <= right_side[j]) {
                 a[k++] = left_side[i++];
             }
@@ -35,6 +36,7 @@ public class MergeSort {
                 a[k++] = right_side[j++];
             }
         }
+        //if either side runs out 
         while (i < left_index) {
             a[k++] = left_side[i++];
         }
@@ -103,7 +105,7 @@ public class MergeSort {
         long time250k =finish250k - start250k;
         System.out.println("Run time of 250K: "+ time250k);
 
-    //300k array size   ////////////////////////////////////////////////////////////
+    //300k array size   
 
         double [] arr300 = new double[300000];
         for (int i = 0; i < arr300.length; i++) {
