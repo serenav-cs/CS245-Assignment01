@@ -84,7 +84,7 @@ public class BubbleSort {
         long time300k =finish300k-start300k;
         System.out.println("Run time of 300K: "+ time300k);
 
-        //350k array size
+        //350k- array size
         double [] arr350 = new double[350000];
         for (int i = 0; i < arr350.length; i++) {
             arr350[i] = rand.nextDouble();
