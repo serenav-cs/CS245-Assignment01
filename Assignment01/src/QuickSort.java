@@ -23,8 +23,8 @@ public class QuickSort {
 
         return i+1;
     }
+    //function of quicksort
 
-    //function for quicksort
     public static void quickSort(double arr[], int left, int right) {
         if (left < right)
         {
