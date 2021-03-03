@@ -98,7 +98,7 @@ public class InsertionSort {
         long time350k =finish350k-start350k;
         System.out.println("Run time of 350K: "+ time350k);
 
-        //400k array size
+        //400k array-size
         double [] arr400 = new double[400000];
         for (int i = 0; i < arr400.length; i++) {
             arr400[i] = rand.nextDouble();
