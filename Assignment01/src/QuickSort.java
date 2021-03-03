@@ -6,8 +6,7 @@ public class QuickSort {
         int i = (left-1); // index of smaller element
         for (int j=left; j<right; j++)
         {
-            // If current element is smaller than or
-            // equal to pivot
+            // If current element is smaller than or equal to pivot
             if (arr[j] <= pivot)
             {
                 i++;
@@ -18,8 +17,6 @@ public class QuickSort {
                 arr[j] = temp;
             }
         }
-
-        // swap arr[i+1] and arr[high] (or pivot)
         double temp = arr[i+1];
         arr[i+1] = arr[right];
         arr[right] = temp;
@@ -35,23 +32,14 @@ public class QuickSort {
 			now at right place */
             int pi = partition(arr, left, right);
 
-            // Recursively sort elements before
-            // partition and after partition
+            // Recursively sort elements before partition and after partition
             quickSort(arr, left, pi-1);
             quickSort(arr, pi+1, right);
         }
     }
 
-
     public static void main(String[] args) {
         System.out.println("Running time (m/s) for Quick Sort: ");
-    //test if array is sorted
-//        double[] array= {10.0, 45.0,35.0,5.0};
-//        quickSort(array,0,array.length-1);
-//        for (int i = 0; i < array.length; i++) {
-//            System.out.println(array[i]);
-//        }
-
         Random rand= new Random();
         //50k array size
         double [] arr50= new double[50000];
