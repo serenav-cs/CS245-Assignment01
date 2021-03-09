@@ -1,0 +1,2 @@
+Selection sort is my choice because its worst case time is O(n^2) and each iteration
+it the amount of comparisions it does each time is n-1, n-2,n-3.... and so forth making it (n*(n-1))/2.

@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class QuickSort {
-    public static int partition(double arr[], int left, int right) {
+    public static int partition(double[] arr, int left, int right) {
         double pivot = arr[right];
         int i = (left-1); // index of smaller element
         for (int j=left; j<right; j++)
@@ -10,7 +10,6 @@ public class QuickSort {
             if (arr[j] <= pivot)
             {
                 i++;
-
                 // swap arr[i] and arr[j]
                 double temp = arr[i];
                 arr[i] = arr[j];
@@ -20,16 +19,13 @@ public class QuickSort {
         double temp = arr[i+1];
         arr[i+1] = arr[right];
         arr[right] = temp;
-
         return i+1;
     }
     //function of quicksort
-
-    public static void quickSort(double arr[], int left, int right) {
+    public static void quickSort(double[] arr, int left, int right) {
         if (left < right)
         {
-			/* pi is partitioning index, arr[pi] is
-			now at right place */
+			/* pi is partitioning index, arr[pi] is now at right place */
             int pi = partition(arr, left, right);
 
             // Recursively sort elements before partition and after partition
@@ -37,6 +33,28 @@ public class QuickSort {
             quickSort(arr, pi+1, right);
         }
     }
+
+    public void quadraticSort (double [] arr, int left, int right){
+        int n = right;
+        for (int i = left; i < n; ++i) {
+            double key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
+            arr[j + 1] = key;
+        }
+    }
+
+
+    public void hybridSort (double [] arr, int left, int right){
+        if(right - left <= 10)
+            quadraticSort(arr, left, right);    //if length < THRESHOLD, use quadraticsort
+        else
+            quickSort(arr, left, right);        //if length > THRESHOLD, use quicksort
+    }
+
 
     public static void main(String[] args) {
         System.out.println("Running time (m/s) for Quick Sort: ");

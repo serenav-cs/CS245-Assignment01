@@ -17,7 +17,7 @@ public class MergeSort {
             right_side[i - mid] = a[i];
         }
         mergeSort(left_side, mid); //recursively merge 
-        mergeSort(right_side, n - mid); //recursively merge
+        mergeSort( right_side, n - mid); //recursively merge
 
         merge(a, left_side, right_side, mid, n - mid);
     }
