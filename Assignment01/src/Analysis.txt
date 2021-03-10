@@ -1,0 +1,41 @@
+---------------------------------------------PART 1-------------------------------------------
+Bubble Sort
+Time - O(n^2) because of the comparisons and swaps it makes each time it
+passes through the array: (n-1)-(n-2)+(n-3)...3+2+1. The first for loop in the bubblesort is O(n)
+and the second for loop does n-1
+Space-0(1) since the amount of number of temporary variables that are made
+
+Selection Sort
+Time - This is also O(n^2)  because each iteration is n(n-1)/2 comparisons
+Space -0(1) since the amount of number of temporary variables that are made
+
+Insertion sort
+Time -O(n^2) because of the nested for loops that are each doing n amount of work each loop
+Space - O(1) since the amount of number of temporary variables that are made
+
+Merge sort
+Time-O(nlogn) since each level it is copying n elements each level out of the array into a new one but will be
+doing n work and merge does n-1 comparisons with each level dividing by 2 which is where logn comes in- put it all
+together and we get O(nlog)
+Space-O(n ) since we have to store the elements in other created arrays
+
+Quicksort
+Time- Each partitioning operation takes O(n) ops (one pass on the array).
+In the partition function it divides the array to two (log n operations).
+Ideally we want it to be O(nlogn) where the pivot is in the middle ( not largest or smallest) but the
+worst case is O(n^2) doing n work each level and n-1 comparisons
+Space-O(logn) since the partition is being called recursively
+---------------------------------------------PART 2-------------------------------------------
+
+Randomized QuickSort2.java
+Runtime: O(n^2) Randomized quicksort is an extension of quicksort so when the pivot is chosen randomly,
+it could potentially be the smallest or largest element in the array .
+Space: same as regular quicksort since the randomizing implementation has no effect on it
+
+QuadraticSortR3.java
+Runtime/Space: This would be the same as Selection
+
+HybridSortR4.java
+Runtime: O(n^2) since we just add up quick sort and quadratic = O(n^2) + O(n^2)= O(n^2)
+
+Space:O(logn) since we just add up quick sort and quadratic space's = O(logn) + O(1)

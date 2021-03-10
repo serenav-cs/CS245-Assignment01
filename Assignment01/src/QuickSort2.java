@@ -7,9 +7,6 @@ public class QuickSort2 {
         int pivotI = new Random().nextInt(right-left)+ left;
         double pivotElement= arr[pivotI];
 
-        //print the pivot
-        System.out.println("The pivot is:" + pivotElement);
-
         double temp= pivotElement;
         arr[pivotI]= arr[right];
         arr[right]=temp;
@@ -44,6 +41,7 @@ public class QuickSort2 {
             // Recursively sort elements before partition and after partition
             quickSort(arr, left, pi-1);
             quickSort(arr, pi+1, right);
+            System.out.println("The index is:" + pi);
         }
     }
 

@@ -2,8 +2,8 @@ import java.util.Random;
 
 public class BubbleSort {
     private static double[] bubbleSort(double[] nums) {
-        for (int i = 0; i < nums.length - 1; i++)
-            for (int j = 0; j < nums.length - i - 1; j++)
+        for (int i = 0; i < nums.length - 1; i++) //O(n)
+            for (int j = 0; j < nums.length - i - 1; j++)//O(n-1)
                 if (nums[j] > nums[j + 1]) {
                     double temp = nums[j];
                     nums[j] = nums[j + 1];
